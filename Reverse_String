@@ -1,0 +1,27 @@
+namespace Reverse_String
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string var = "butts";
+            Console.WriteLine(Reverse(var));
+            Console.ReadLine(); 
+
+        }
+
+        static string Reverse(string input)
+        {
+            int length = input.Length;
+            char[] InputArray = input.ToCharArray();
+            char[] OutputArray = new char[length];
+
+            for ( int i=0; i<length; i++)
+            {
+                OutputArray[i] = InputArray[length - 1 - i];
+            }
+
+            return new string(OutputArray);
+        }
+    }
+}
